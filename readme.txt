@@ -1,4 +1,4 @@
-i am go-tour program - i am game
+i am go-tour program
 
 my language is clojure
 my runtime is jvm

@@ -17,6 +17,17 @@ main(){
     -M -m go-tour.main
 }
 
+uberjar(){
+  clojure \
+    -X:uberjar hf.depstar/uberjar \
+    :aot true \
+    :jar out/go-tour.standalone.jar \
+    :verbose false \
+    :main-class go-tour.main
+  mkdir -p out/jpackage-input
+  mv out/go-tour.standalone.jar out/jpackage-input/
+}
+
 j-package(){
   OS=${1:?"Need OS type (windows/linux/mac)"}
 
